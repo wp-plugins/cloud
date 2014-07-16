@@ -39,22 +39,6 @@
 			echo '<font style="color:red;font-weight:bold;">ERROR</font>';
 		}
 		echo '<br/>';
-		
-		echo 'file_exist /delete.php --> ';
-		if (file_exists($dir . '/delete.php')) {
-			echo '<font style="color:green;font-weight:bold;">YES</font>';
-		} else {
-			echo '<font style="color:red;font-weight:bold;">ERROR</font>';
-		}
-		echo '<br/>';
-		
-		echo 'file_exist /upload.php --> ';
-		if (file_exists($dir . '/upload.php')) {
-			echo '<font style="color:green;font-weight:bold;">YES</font>';
-		} else {
-			echo '<font style="color:red;font-weight:bold;">ERROR</font>';
-		}
-		echo '<br/>';
 	
 		echo 'is_reachable /cloud/index.php --> ';
 		$urlcheck = get_site_url() . '/cloud/index.php';

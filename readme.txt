@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: 
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 0.2
-Stable tag: 0.2
+Version: 0.2.1
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,7 @@ This plugin practically generates a folder under your second-level domain (ex. w
 The Cloud Panel of WP Cloud can be accessed from www.mywebsite.com**/cloud** and give users the opportunity to log-in and manage their file via a friendly mask. For un-logged users, the authentication will be prompted (username and password are the same of your website for every member).
 
 Directly via the cloud panel, logged-in users can:
+
 * see files uploaded, and eventually delete
 * see cloud space assigned
 * see cloud space used (with percentage too)
@@ -31,11 +32,14 @@ Directly via the cloud panel, logged-in users can:
 = Users quota =
 WP Cloud offers a standard user-quota of 10MB, that is applied by default to every member. You can change this value to give all the users the space you want.
 The quota for each user is stored in a meta-field for each profile with the following criteria:
+
 * null = default quota (the meta-field doesn't exist)
 * 0 = hosting not allowed
 * any other number = n MB hosting
+
 Please note that the user-quota only applies when the user uploads a file. If a user has 90 of 100MB used and you downgrade it to 10MB, his file are kept but won't be able to upload files.
 There is also an **overload-quota** (default 10%) in percentage that can be set in the settings panel. It works as follows:
+
 * 9 of 10 MB used. Overload 10%. File to upload: 2MB. -> YES
 * 9 of 10 MB used. Overload 0%. File to upload: 2MB. -> NO
 * 10 of 10MB used. Overload 10%. File to upload: 1MB. -> NO
@@ -43,6 +47,7 @@ There is also an **overload-quota** (default 10%) in percentage that can be set 
 
 = Shortcodes =
 In addition you can create custom pages in your website using the following shortcodes:
+
 * **[cloud]** prints a list of files for the current user
 * **[cloud_upload]** prints a simple upload form that allows the current user to upload a file in his/her directory.
 
@@ -54,3 +59,9 @@ In addition you can create custom pages in your website using the following shor
 == Screenshots ==
 
 == Changelog ==
+
+= 0.2.1 16/07/2014 =
+* **Fixed** some bugs
+
+= 0.2 16/07/2014 =
+* First commit

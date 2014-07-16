@@ -7,7 +7,7 @@
 	
 	<div id="welcome-panel" class="welcome-panel">
 		<div class="welcome-panel-content">
-			<a class="welcome-panel-close" href="">Settings</a>
+			<a class="welcome-panel-close" href="admin.php?page=wpcloud_settings">Settings</a>
 			<h3>Welcome to WP Cloud</h3>
 			<p class="about-description">Here are some statistics of the entire website for you:</p>
 			<div class="welcome-panel-column-container">
@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<hr>
-			<p>You can manage your files from <a href="' . get_site_url() . '/cloud" title="Cloud"><strong>' . get_site_url() . '/cloud</strong></a>, change user quota directly in the <a href="' . get_site_url() . '/wp-admin/users.php" title="Cloud"><strong>\'Users\' screen</strong></a> or </p>
+			<p>You can manage your files from <a href="' . get_site_url() . '/cloud" title="Cloud"><strong>' . get_site_url() . '/cloud</strong></a></p>
 		</div>
 	</div>';
 		
