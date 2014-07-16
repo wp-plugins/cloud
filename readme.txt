@@ -58,6 +58,10 @@ In addition you can create custom pages in your website using the following shor
 
 == Screenshots ==
 
+1. Shortcode
+
+2. Back-end dashboard
+
 == Changelog ==
 
 = 0.2.1 16/07/2014 =
