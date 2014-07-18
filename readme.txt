@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: 
 Requires at least: 3.3
 Tested up to: 3.6
-Version: 0.2.2
-Stable tag: 0.2.2
+Version: 0.2.3
+Stable tag: 0.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,11 @@ http://wordpress.org/support/plugin/cloud
 2. Back-end dashboard
 
 == Changelog ==
+
+= 0.2.3 18/07/2014 =
+* **Fixed** error 404 for file links
+* **Added** wp admin bar in */cloud
+* **Removed** wp footer in */cloud
 
 = 0.2.2 16/07/2014 =
 * Readme.txt changes

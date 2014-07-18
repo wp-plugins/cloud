@@ -39,24 +39,19 @@
         
 <?php echo '
             <script>
-                var elem = document.getElementById("wpadminbar");
-                elem.parentNode.removeChild(elem);
                 var elem = document.getElementById("adminmenuback");
                 elem.parentNode.removeChild(elem);
                 var elem = document.getElementById("adminmenuwrap");
                 elem.parentNode.removeChild(elem);
                 var elem = document.getElementById("wpfooter");
                 elem.parentNode.removeChild(elem);
-            </script>
+            </script> ';?>
             
-            <style>
-            html.wp-toolbar {
-                padding-top: 0px;
-            }
+<style>
             #wpcontent {
                 margin-left:0px;
             }
-            ';?>
+           
             
 body { font-family: "Open Sans", sans-serif; padding: 0; margin: 0; background: #f5f5f5; }
 .head { width: 515px; margin: 3em auto 0em auto; text-align:right; }
@@ -77,6 +72,8 @@ a { color: #399ae5; text-decoration: none; } a:hover { color: #206ba4; text-deco
 .wpcloud-file.mime-applicationvnd-oasis-opendocument-spreadsheet{background-image:url(<?php echo $icon_folder; ?>document-ods.png);}
 .wpcloud-file.mime-applicationvnd-oasis-opendocument-text{background-image:url(<?php echo $icon_folder; ?>document-odt.png);}
 .wpcloud-file.mime-audiompeg{background-image:url(<?php echo $icon_folder; ?>document-music.png);}
+
+#wpfooter { display:none;}
             </style>
     
     <?php

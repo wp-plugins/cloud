@@ -27,12 +27,13 @@
 				// ====
 				
 				$file = $dir . '/' . $entry;
+				$file_url = get_site_url() . '/cloud/' . get_current_user_id() . '/' . $entry;
 				
 				echo '<tr>';
 				echo '<td><a ';
 
 				echo 'class="wpcloud-file mime-' . getMimeType($file) . '" ';
-				echo 'href="' . $file . '" title="' . $entry . '">' . $entry . '</a></td>';
+				echo 'href="' . $file_url . '" title="' . $entry . '">' . $entry . '</a></td>';
 				echo '<td><small>' . wpcloud_format_size($file, false) . '</small></td>';
 				echo '<td><small>' . date("j M Y", filemtime($file)) . '</small></td>';
 				
