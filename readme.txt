@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: 
 Requires at least: 3.3
 Tested up to: 4.2
-Version: 0.3
-Stable tag: 0.3
+Version: 0.3.1
+Stable tag: 0.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,10 +80,11 @@ http://wordpress.org/support/plugin/cloud
 
 == Changelog ==
 
-= 0.3 01/03/2015 =
+= 0.3.1 01/03/2015 =
 * Minor bugfixes
 * Better backend cloud panel
 * Added mp3, mp4 as supported file types
+* Fixed wrong redirection on file delete
 
 = 0.2.3 18/07/2014 =
 * **Fixed** error 404 for file links
