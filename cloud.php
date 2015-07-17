@@ -3,7 +3,7 @@
 Plugin Name: WP Cloud
 Plugin URI: http://wpgov.it
 Description: Give every user a personal web-space with WP Cloud, the most advanced plugin to make WordPress a cloud platform!
-Version: 0.3.1
+Version: 1.4
 Author: Marco Milesi
 Author Email: milesimarco@outlook.com
 Author URI: http://marcomilesi.ml
@@ -28,6 +28,7 @@ function register_wpcloud_menu_page(){
     add_menu_page('Cloud', 'Cloud', 'manage_options', 'wpcloud', 'wp_cloud_panel', 'dashicons-cloud', 50);
 	add_submenu_page('wpcloud', 'Settings', 'Settings', 'manage_options', 'wpcloud_settings', 'wpcloud_settings_panel');
 	add_submenu_page('wpcloud', 'System', 'System', 'manage_options', 'wpcloud_sys', 'wpcloud_sys_panel');
+    add_submenu_page('wpcloud', 'Log', 'Log', 'manage_options', 'wpcloud_log', 'wpcloud_log_panel');
 	//add_submenu_page('wpcloud', 'Users quota', 'Users quota', 'manage_options', 'wpcloud_syst', 'wpcloud_test_panel');
 	add_submenu_page( 'null', 'Public Cloud Iframe', 'Public Cloud Iframe', 'manage_options', 'wpclod_iframe', 'wpcloud_iframe_callback' ); 
 }
@@ -35,7 +36,7 @@ function register_wpcloud_menu_page(){
 add_action('admin_init', 'wpcloud_reg');
 function wpcloud_reg() {
     register_setting( 'wpcloud_options_group', 'wpcloud_version');
-    update_option( 'wpcloud_version', '0.3' );
+    update_option( 'wpcloud_version', '1.4' );
 	
 }
 
@@ -70,5 +71,23 @@ function wpcloud_activate() {
 function wpcloud_deactivate() {
     unlink(ABSPATH . 'cloud/index.php');
 }
-		
+
+function wpcloud_log_panel() {
+    echo '<div class="wrap"><h2>WP Cloud Log</h2><hr>';
+    if ( get_option('wpcloud_log') ) {
+        echo get_option('wpcloud_log');
+    } else {
+        echo 'No action registered...';
+    }
+    echo '</div>';
+}
+
+function wpcloud_log($text, $important) {
+    if ($important) {
+        $text = '<b>' . $text . '</b>';
+    }
+    $text = '<span style="background:black;color:white;">'. wp_get_current_user()->user_login . ' (' . wp_get_current_user()->ID . ')</span> ' . $text;
+    update_option( 'wpcloud_log', get_option('wpcloud_log').'<br>'.$text);
+    return;
+}
 ?>

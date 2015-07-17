@@ -12,7 +12,7 @@
 		if ($handle = opendir($dir)) {
 
 		echo '<table style="width:100%">
-			<table style="width:100%">
+			<table style="width:100%" name="'. $user .'">
 			<tr>
 			  <th>File name</th>
 			  <th>Size</th> 

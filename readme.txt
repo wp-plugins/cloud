@@ -4,23 +4,21 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: 
 Requires at least: 3.3
 Tested up to: 4.2
-Version: 0.3.1
-Stable tag: 0.3.1
+Version: 1.4
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Give all users their personal space with WP Cloud, the most advanced plugin to add a cloud platform for WordPress!
+Give users their personal space with WP Cloud, the most advanced plugin to turn WordPress into a cloud platform!
 
 == Description ==
 
-> **Warning**: this plugin is still in beta
-
-WP Cloud allows you to turn WordPress in a cloud platform. With this plugin your users will have their personal space for hosting images or documents, and can access them with easy when they want.
+WP Cloud allows you to create a cloud platform. With this plugin your users will have their personal space for hosting images or documents, and can easily access and share them.
 
 This plugin generates a folder under your second-level domain (ex. website.com/**cloud**) with one folder for each user (ex. mywebsite.com/**cloud/$user_id/***). Every user can store the file there via a front-end mask displayed using shortcodes, back-end dashboard or the exciting cloud panel found in website.com/cloud.
 
 = What is the cloud panel? =
-The Cloud Panel of WP Cloud can be accessed from website.com**/cloud** and give users the opportunity to log-in and manage their file via a friendly mask. For un-logged users, the log-in for will be shown and users can authenticate themselves with their WordPress credentials.
+The Cloud Panel of WP Cloud can be accessed from website.com**/cloud** and give users the opportunity to log-in and manage their file via a friendly mask. For un-logged users, the log-in for will be shown and users can authenticate.
 
 Directly via the cloud panel, logged-in users can:
 
@@ -49,7 +47,9 @@ There is also an **overload-quota** (default 10%) in percentage that can be set 
 In addition you can create custom pages in your website using the following shortcodes:
 
 * **[cloud]** prints a list of files for the current user
-* **[cloud_upload]** prints a simple upload form that allows the current user to upload a file in his/her directory.
+* **[cloud_show id="0"]** prints a list of files of given user id
+* **[cloud_upload]** prints a simple upload form that allows the current user to upload a file in his/her directory
+* **[cloud_send]** prints a simple upload form that allows the current user to upload a file to another user directory by specifying login_name or email
 
 = Translations =
 The plugin is in English and actually doesn't have support for translations. In some days it will, with italian translation included.
@@ -79,6 +79,14 @@ http://wordpress.org/support/plugin/cloud
 2. Back-end dashboard
 
 == Changelog ==
+
+= 1.4 17/07/2015 =
+* Added send file shortcode (Thanks to Cédric Jézéquel)
+* Added show another user files shortcode (Thanks to Cédric Jézéquel)
+* Added log system
+* Minor improvements 
+* Improved Readme and banner
+* Out of beta
 
 = 0.3.1 01/03/2015 =
 * Minor bugfixes

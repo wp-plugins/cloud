@@ -1,8 +1,11 @@
-<h3>Upload new file:</h3>
-<form action="<?php echo get_site_url(); ?>/?cloud=upload&redirect=<?php echo $_SERVER["REQUEST_URI"]; ?>" method="post" enctype="multipart/form-data">
+<h3>Send new file to:</h3>
+<form action="<?php echo get_site_url(); ?>/?cloud=send&redirect=<?php echo $_SERVER["REQUEST_URI"]; ?>" method="post" enctype="multipart/form-data">
 <label for="file">File:</label>
 <input class="wpcloud_buttonupload" type="file" name="file" id="file"><br/>
+<label for="username">Contact e-mail or username: </label>
+<input class="wpcloud_buttonsend" type="text" name="username" id="send"><br/>
 <input class="button button-small" type="submit" name="submit" value="Submit">
+
 </form>
 
 <style>

@@ -8,6 +8,7 @@ function wpcloud_generate_users_meta() {
 		$has_meta = get_user_meta($blogusers->ID,'wpcloud_user_quota',true);
 		if (!($hasmeta)) {
 			add_user_meta( $blogusers->ID, 'wpcloud_user_quota', '2');
+            wpcloud_log( 'added user meta for ID '.$blogusers->ID, true);
 		}
 	}
 	
